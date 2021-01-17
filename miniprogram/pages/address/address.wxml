@@ -1,0 +1,16 @@
+<view class="container">
+    <!-- 收货地址列表 -->
+    <block wx:for="{{addressList}}" wx:key="item">
+        <view class="address_main" bindtap="handleItemClick" bindlongtap="handleLongClick" data-index="{{index}}">
+            <view class="content">
+                <text>{{item.buyName}}</text>
+                <text>{{item.buyPhone}}</text>
+            </view>
+            <text class="address_wrap">{{item.buyAddress}}</text>
+            <image class="edit" src="../../icons/bianji.png" catchtap="handleEditItem" data-index="{{index}}"></image>      
+        </view>
+    </block>
+
+    <!-- 新增地址 -->
+    <text class="add_Address" bindtap="handleAddAddress">新增</text>
+</view>

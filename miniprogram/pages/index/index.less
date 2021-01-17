@@ -1,0 +1,61 @@
+.index_swiper{
+    swiper{
+        width: 750rpx;
+        height: 340rpx;
+        image{
+            width: 100%;
+        }
+    }
+}
+
+.index_cate{
+    //自由伸缩
+    display: flex;
+    navigator{
+        flex: 1;
+        padding: 20rpx;
+        image{
+            width: 100%;
+        }
+    }
+}
+
+.index_floor{
+    .floor_group{
+        .floor_title{
+            padding: 10rpx 0;
+            border-left: 5rpx solid #ffffff;
+            image{
+                width: 100%;
+            }
+        }
+        .floor_list{
+            overflow: hidden;
+            navigator{
+                float: left;
+                width: 95%;
+                border-left: 5rpx solid #ffffff;
+                /*后面的4个图片链接的高是第一张图片的一半*/
+                // &:nth-last-child(-n+4){
+                // #aa{
+                // /*原图宽高 232 * 386*/
+                // // 232 /386 = 33.33vw / height
+                // //第一张图的高度height=33.33vw * 386/232 
+                // height: 33.33vw * 386/232/2;
+
+                // //给后四张图片加左边框
+                // border-left: 10rpx solid #ffffff;
+                // }
+                /* 2 3 两个图片加下边框*/
+                // &:nth-child(2),
+                // &:nth-child(3){
+                //     border-bottom: 10rpx solid #ffffff;
+                // }
+                image{
+                    width: 100%;
+                    height: 100%;
+                }
+            } 
+        }
+    }
+}

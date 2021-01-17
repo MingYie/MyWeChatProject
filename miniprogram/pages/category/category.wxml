@@ -1,0 +1,207 @@
+<view class="category_index">
+    <!-- 搜索框开始 -->
+    <SearchInput></SearchInput>
+    <!-- 搜索框结束 -->
+    <view class="category_containers">
+    <!-- 左侧菜单 -->
+    <scroll-view scroll-y="{{true}}" class="left_menu">
+        <block wx:for="{{Categroy}}" wx:key="id">
+          <view class="menu_left {{ index === curIndex ? 'active' : ''}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="navTap">{{item.title}}</view>
+       </block>
+        <!-- <view class="menu_left" bindTap="navTap"
+        wx:for="{{leftList}}" wx:key="*this">
+        {{item}}
+        </view> -->
+    </scroll-view>  
+    <!-- 右侧菜单 -->
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="{{true}}" class="right_menu">
+        <!-- <view class="groups_group"
+        wx:for="{{Categroy}}"
+        wx:key="id"
+        wx:for-index="index"
+        wx:for-item="item"
+        > -->
+            <!-- <view class="menu_title">
+                <text class="delimiter">/</text>
+                <text class="title">{{item.title}}</text>
+                <text class="delimiter">/</text>
+            </view> -->
+            <view class="menu_list">
+
+                    <!-- <navigator url="/pages/goods_detail/goods_detail?title=navigate" hover-class="navigator-hover"> -->
+                    <block wx:if="{{curNav===0}}">
+                        <view class="first_tab">
+                            <view class="menu_title">
+                                <text class="delimiter">/</text>
+                                <text class="title">{{Categroy[0].title}}</text>
+                                <text class="delimiter">/</text>
+                            </view>
+                            <navigator url="/pages/goods_detail/goods_detail?categoryld=103"  class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                <image  mode="widthFix" src="{{Categroy[0].pic}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">小笼包必点,一笼16个。皮薄馅料新鲜，沾上醋，一口下去，嗲的不得了！</view>
+                                    <view class="goods_price"> ¥ 25</view>
+                                </view>
+                            </navigator>
+                            <navigator url="/pages/goods_detail/goods_detail?categoryld=104" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[0].pic2}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">火锅之乐，在于意趣，亲朋好友围着火锅，边煮边烫，边吃边聊，其乐无穷。</view>
+                                    <view class="goods_price"> ¥ 40</view>
+                                </view>
+                            </navigator>
+
+                            <navigator url="/pages/goods_detail/goods_detail?title={{Categroy[0].title}}" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[0].pic3}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">牛肉都是精肉，香料是秘制的，面条也做的细滑弹牙，吃在嘴里暖在心里。</view>
+                                    <view class="goods_price"> ¥ 20</view>
+                                </view>
+                            </navigator>
+                            <navigator url="/pages/goods_detail/goods_detail?title={{Categroy[0].title}}" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[0].pic4}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">牛肉都是精肉，香料是秘制的，面条也做的细滑弹牙，吃在嘴里暖在心里。</view>
+                                    <view class="goods_price"> ¥ 20</view>
+                                </view>
+                            </navigator>
+                            
+                        </view>
+                    </block>
+                    <!-- </navigator> -->
+                    <block wx:if="{{curNav ===35}}">
+                        <view class="first_tab">
+                            <view class="menu_title">
+                                <text class="delimiter">/</text>
+                                <text class="title">{{Categroy[0].title}}</text>
+                                <text class="delimiter">/</text>
+                            </view>
+                            <navigator url="/pages/goods_detail/goods_detail?categoryld=103"  class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                <image  mode="widthFix" src="{{Categroy[0].pic}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">小笼包必点,一笼16个。皮薄馅料新鲜，沾上醋，一口下去，嗲的不得了！</view>
+                                    <view class="goods_price"> ¥ 25</view>
+                                </view>
+                            </navigator>
+                            <navigator url="/pages/goods_detail/goods_detail?categoryld=104" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[0].pic2}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">火锅之乐，在于意趣，亲朋好友围着火锅，边煮边烫，边吃边聊，其乐无穷。</view>
+                                    <view class="goods_price"> ¥ 40</view>
+                                </view>
+                            </navigator>
+
+                            <navigator url="/pages/goods_detail/goods_detail?title={{Categroy[0].title}}" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[0].pic3}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">牛肉都是精肉，香料是秘制的，面条也做的细滑弹牙，吃在嘴里暖在心里。</view>
+                                    <view class="goods_price"> ¥ 20</view>
+                                </view>
+                            </navigator>
+                            <navigator url="/pages/goods_detail/goods_detail?title={{Categroy[0].title}}" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[0].pic4}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">牛肉都是精肉，香料是秘制的，面条也做的细滑弹牙，吃在嘴里暖在心里。</view>
+                                    <view class="goods_price"> ¥ 20</view>
+                                </view>
+                            </navigator>
+                        </view>
+                        
+                    </block>
+                    <block wx:elif="{{curNav===36}}">
+                        <view class="first_tab">
+                            <view class="menu_title">
+                                <text class="delimiter">/</text>
+                                <text class="title">{{Categroy[1].title}}</text>
+                                <text class="delimiter">/</text>
+                            </view>
+                            <navigator url="/pages/goods_detail/goods_detail?categoryld=103"  class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                <image  mode="widthFix" src="{{Categroy[1].pic}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">“披萨”(pizza)是一种由特殊的饼底、乳酪、酱汁和馅料制成的,具有意大利风味的食品,</view>
+                                    <view class="goods_price"> ¥ 28</view>
+                                </view>
+                            </navigator>
+                            <navigator url="/pages/goods_detail/goods_detail?categoryld=104" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[1].pic2}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">意大利面上红红的番茄酱慢慢地流入意面的内部。我拿起叉子，把番茄酱与意面搅拌均匀，又用叉子裹起意面放到嘴里。</view>
+                                    <view class="goods_price"> ¥ 30</view>
+                                </view>
+                            </navigator>
+
+                            <navigator url="/pages/goods_detail/goods_detail?title={{Categroy[0].title}}" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[1].pic3}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">鸡米花炸粉配合腌料作出专业水准的鸡米花，盐酥鸡米花、鸡肉棒、炸鸡排、鸭米花、劲爆猪、 上海香香炸翅。</view>
+                                    <view class="goods_price"> ¥ 18</view>
+                                </view>
+                            </navigator>
+                        </view>           
+                    </block>
+                    <block wx:elif="{{curNav===37}}">
+                        <view class="first_tab">
+                            <view class="menu_title">
+                                <text class="delimiter">/</text>
+                                <text class="title">{{Categroy[2].title}}</text>
+                                <text class="delimiter">/</text>
+                            </view>
+                            <navigator url="/pages/goods_detail/goods_detail?categoryld=103"  class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                <image  mode="widthFix" src="{{Categroy[2].pic}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">抹茶拿铁抹茶拿铁是由抹茶粉和牛奶混合而成的饮料，有丰富的营养成分和微量元素。</view>
+                                    <view class="goods_price"> ¥ 12</view>
+                                </view>
+                            </navigator>
+                            <navigator url="/pages/goods_detail/goods_detail?categoryld=104" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[2].pic2}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">珍珠奶茶（Bubble tea），又称波霸奶茶，简称珍奶，是一项流传于台湾的茶类饮料，将粉圆加入奶茶之后，就成为珍珠奶茶。</view>
+                                    <view class="goods_price"> ¥ 18</view>
+                                </view>
+                            </navigator>
+
+                            <navigator url="/pages/goods_detail/goods_detail?title={{Categroy[0].title}}" class="goods_item" hover-class="navigator-hover">
+                                <view class="img_right_wrap">
+                                    <image  mode="widthFix" src="{{Categroy[2].pic3}}"></image>
+                                </view>
+                                <view class="info_wrap">
+                                    <view class="goods_name">红豆奶茶是一道美食，主要食材是鲜牛奶、红豆。 捧在手里的那杯温暖的奶茶，虽然没有红酒的高贵典雅，没有咖啡的精致摩登，却自有一种朴实的味道。</view>
+                                    <view class="goods_price"> ¥ 22</view>
+                                </view>
+                            </navigator>
+                        </view>
+                    </block>
+                    
+
+            </view>
+        <!-- </view> -->
+    </scroll-view>
+    </view>
+</view>

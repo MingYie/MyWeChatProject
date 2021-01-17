@@ -1,0 +1,38 @@
+<!-- 
+    1父组件(页面)向子组件传递数据通过标签属性的方式来传递
+        1在子组件上进行接收
+        2把这个数据当成是data中的数据直接用即可 
+    2.子向父传递数据 通过事件的方式传递
+        1.在子组件的标签上加入一个自定义事件
+
+    -->
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+    <view class="order_main">
+        <view 
+        wx:for="{{orders}}"
+        wx:key="order_id"
+        class="order_item"
+        >
+            <view class="order_no_row">
+                <view class="order_no_text">订单编号</view>
+                <view class="order_no_value">{{item.orderId}}</view>
+            </view>
+            <view class="order_price_row">
+                <view class="order_price_text">菜品名称</view>
+                <view class="order_no_value">{{item.shippingName}}</view>
+            </view>
+            <view class="order_price_row">
+                <view class="order_price_text">菜品数量</view>
+                <view class="order_price_value">x{{item.shippingNum}}</view>
+            </view>
+            <view class="order_price_row">
+                <view class="order_price_text">订单价格</view>
+                <view class="order_price_value">¥ {{item.shippingTotalPrice}}</view>
+            </view>
+            <view class="order_time_row">
+                <view class="order_time_text">订单日期</view>
+                <view class="order_time_val">{{item.created}}</view>
+            </view>
+        </view>
+    </view>
+</Tabs>

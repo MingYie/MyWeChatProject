@@ -1,0 +1,20 @@
+.tabs_title {
+  display: flex;
+  padding: 15rpx 0;
+}
+.title_item {
+  flex: 1;
+  /* 伸缩 */
+  display: flex;
+  /* 水平对齐 */
+  justify-content: space-around;
+  /* 垂直对齐 */
+  align-items: center;
+}
+/* 激活选中效果 */
+.active {
+  color: red;
+  padding: 10rpx 0;
+  /* 下边框位当前字体的颜色 */
+  border-bottom: 5rpx solid currentColor;
+}

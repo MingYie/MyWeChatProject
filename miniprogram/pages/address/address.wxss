@@ -1,0 +1,53 @@
+/* pages/address/address.wxss */
+.container{
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.address_main{
+    width: 90%;
+    background: white;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 3px 3px 8px #c1c1c1;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 8px;
+    font-size: 12px;
+    position: relative;
+}
+
+.address_main .content{
+    display: flex;
+    /* 让在1行显示 */
+    flex-direction: row;
+}
+
+.address_main .content text:nth-child(2){
+    margin-left: 10px;
+}
+.address_main .address_wrap{
+    margin-top: 10px;
+}
+
+.address_main .edit{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 22px;
+    bottom: 0px;
+    top: 19px;
+}
+
+.add_Address{
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    padding: 14px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: linear-gradient(to right,rgb(1, 87, 233),rgb(11, 229, 245 ));
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}

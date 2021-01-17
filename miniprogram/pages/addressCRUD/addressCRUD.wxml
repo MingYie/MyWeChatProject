@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="inputAddress">
+        <image src="../../icons/name.png"></image>
+        <input  value="{{addressData.buyName}}" type="text" 
+         placeholder="姓名" data-typename ='buyName' maxlength="30"  bindinput="handleOnInput">
+        </input>
+    </view>
+
+     <view class="inputAddress">
+        <image src="../../icons/phone.png"></image>
+        <input  value="{{addressData.buyPhone}}" type="number" 
+         placeholder="电话" data-typename ='buyPhone' maxlength="30"  bindinput="handleOnInput">
+        </input>
+    </view>
+
+     <view class="inputAddress">
+        <image src="../../icons/address.png"></image>
+        <input  value="{{addressData.buyAddress}}" type="text" 
+         placeholder="详细地址" data-typename ='buyAddress' maxlength="250"  bindinput="handleOnInput">
+        </input>
+    </view>
+
+    <text class="btn-save" bindtap="handleSave">保存</text>
+</view>

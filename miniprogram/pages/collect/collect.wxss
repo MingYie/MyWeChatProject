@@ -1,0 +1,30 @@
+.collect_main .collect_content .goods_item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.collect_main .collect_content .goods_item .goods_image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collect_main .collect_content .goods_item .goods_image img {
+  width: 50%;
+}
+.collect_main .collect_content .goods_item .goods_info {
+  flex: 3;
+  display: flex;
+  padding: 0 20rpx;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.collect_main .collect_content .goods_item .goods_info .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.collect_main .collect_content .goods_item .goods_info .goods_price {
+  color: red;
+  font-size: 32rpx;
+}

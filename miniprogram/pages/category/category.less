@@ -1,0 +1,104 @@
+page{
+    height: 100%;
+}
+
+
+.txt{
+    color:#f00;
+}
+
+// .lmj1{
+//     width: 99.33%;
+//     border-bottom: 5rpx solid #ffffff;
+// }
+
+.category_index{
+    height: 100%;
+    .category_containers{
+        /*less中使用cals的时候要注意用 ~''来原样输出*/
+        height: ~'calc(100vh - 90rpx)';
+        display: flex;/*伸缩盒子*/
+        .left_menu{
+            /*子项 高度 100% flex*/
+            flex: 2;
+        
+            .menu_left{
+                height: 80rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30rpx;
+
+            }
+            .active{
+                color: #FF6666;
+                border-left: 5rpx solid currentColor;
+            }
+        } 
+        .right_menu{
+            /*子项 高度 100% flex*/
+            flex: 5;
+                
+            .menu_list{
+                .first_tab{
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+                    .menu_title{
+                        height: 80rpx;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .delimiter{
+                            color: #ccc;
+                            padding: 0 10rpx;
+                        }
+                        .title{
+                            
+                        }
+                        width: 99.33%;
+                        text-align: center;
+                    }
+                    .goods_item{
+                        display: flex;
+                        border-bottom: 1px solid #ccc;
+                        .img_right_wrap{
+                            flex: 3;
+                            justify-content: center;
+                            align-items: center;
+                            // .lmj1{
+                            //     width: 99.33%;
+                            //     border-bottom: 5rpx solid #ffffff;
+                            // }
+                            image{
+                                width: 100%;
+                            }
+                        }
+                        .info_wrap{
+                            flex: 3;
+                            display: flex;
+                            // 改变主流方向
+                            flex-direction: column;
+                            // 左右环绕
+                            justify-content: space-around;
+                            padding-left: 4rpx;
+                            .goods_name{
+                                display: -webkit-box;
+                                overflow: hidden;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                            }
+                            .goods_price{
+                                color: #FF0033;
+                                font-size: 32rpx;
+                            }
+                        }
+                    }
+                
+                
+                }
+            }
+            
+        }
+    }
+}

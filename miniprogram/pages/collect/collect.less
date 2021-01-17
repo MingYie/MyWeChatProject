@@ -1,0 +1,36 @@
+.collect_main {
+    .collect_content {
+      .goods_item {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        .goods_image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 50%;
+            }
+        }
+  
+        .goods_info {
+            flex: 3;
+            display: flex;
+            padding: 0 20rpx;
+            flex-direction: column;
+            justify-content: space-around;
+            .goods_name {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+  
+            .goods_price {
+                color: red;
+                font-size: 32rpx;
+            }
+        }
+      }
+    }
+}

@@ -1,0 +1,31 @@
+<!-- 
+    1父组件(页面)向子组件传递数据通过标签属性的方式来传递
+        1在子组件上进行接收
+        2把这个数据当成是data中的数据直接用即可 
+    2.子向父传递数据 通过事件的方式传递
+        1.在子组件的标签上加入一个自定义事件
+
+    -->
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+   <view class="collect_main">
+    <view class="collect_content">
+        <navigator class="goods_item"
+        wx:for="{{collect}}"
+        wx:key="id"
+        url="/pages/goods_detail/goods_detail?categoryld={{item.category_Id}}"
+        >
+        <!-- 左侧图片容器 -->
+        <view class="goods_image">
+            <image mode="widthFix"
+            src="{{item.pic}}">
+            </image>
+        </view>
+        <!-- 右侧商品容器 -->
+        <view class="goods_info">
+            <view class="goods_name">{{item.titleDesc}}</view>
+            <view class="goods_price">¥{{item.subTitle}}</view>
+        </view>
+        </navigator>
+    </view>
+   </view>
+</Tabs>
